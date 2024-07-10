@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><bxslider></title>
+        <style>
+            *{margin: 0; padding: 0;}
+            img{
+                max-width: 100%;
+                vertical-align: bottom;
+            }
+            ul{list-style: none;}
+         .box{
+         max-width:800px;
+         /* height: 600px; */
+         margin: 0 auto;
+         background-color: #999;
+         } 
+         .slider li{
+            /* height: 300px; */
+            aspect-ratio: 6/4;
+         }  
+         .slider li img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+         } 
+         
+         </style> 
+         <link rel="stylesheet" href="css/jquery.bxslider.css">      
+</head>
+<body>
+    <div class="box">
+        <ul class="slider">
+            <!-- ul.slider>li*3>img -->
+            <li><img src="a.jpg" alt=""></li>
+            <li><img src="b.jpg" alt=""></li>
+            <li><img src="c.jpg" alt=""></li>
+        </ul>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        // $(function)(){});
+         $(function(){
+            $('.slider').bxSlider({
+                 auto:true,
+                 speed:3000,
+                pause:6000,
+                // アニメーションが始まる前の静止時間 
+                mode:'fade',// スライドをフェード似帰る 
+                pager:false,// 黒丸けす 
+                controls:false,
+                // 矢印を消す
+
+            });
+         });
+       
+    </script>
+</body>
+</html>
